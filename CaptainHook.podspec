@@ -13,6 +13,7 @@ Pod::Spec.new do |spec|
   spec.social_media_url = "http://weibo.com/xiaoqing28"                   
   spec.platform         = :ios, "8.0"                                     
   spec.source           = { :git => "https://github.com/AloneMonkey/CaptainHook.git", :tag => spec.version.to_s }  
+  spec.source_files     = "CaptainHook.m"
   spec.public_header_files = "CaptainHook.h"        
   spec.requires_arc     = true                                       
   spec.pod_target_xcconfig = { "ONLY_ACTIVE_ARCH" => "No" }          
