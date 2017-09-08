@@ -661,7 +661,7 @@ static void *CHIvar_(id object, const char *name)
 	(*CHIvarRef(object, name, type))
 	// Warning: Dereferences NULL if object is nil or name isn't found. To avoid this save CHIvarRef(...) and test if != NULL
 
-#define CHDeclareProperty(class, name) static const char k ## class ## _ ## name;
+#define CHDeclareProperty(class, name) static const char k ## class ## _ ## name = '\0';
 #define CHPropertyGetValue(class, name) objc_getAssociatedObject(self, &k ## class ## _ ## name )
 #define CHPropertySetValue(class, name, value, policy) objc_setAssociatedObject(self, &k ## class ## _ ## name , value, policy)
 
